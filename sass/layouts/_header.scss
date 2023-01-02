@@ -6,6 +6,7 @@
 
 .header-container {
   display: flex;
+  align-items: center;
 }
 
 .navigation {
@@ -14,14 +15,27 @@
 }
 
 .logo {
-  padding: 24px 0 25px 0;
-  margin-right: 93px;
+  padding: 16px 0;
   color: #000000;
   text-decoration: none;
 
   font-family: 'Raleway';
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
+
+  @media screen and (min-width: 768px) {
+    padding: 26px 0;
+    margin-right: 87px;
+    font-size: 24px;
+    line-height: 1.17;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 24px 0 25px 0;
+    margin-right: 92px;
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo__net {
@@ -30,15 +44,21 @@
 
 .navigation__site {
   display: flex;
-  margin: 0;
-  padding: 0;
   list-style: none;
 
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin: 0;
+    padding: 0;
+  }
 }
 
- .navigation__list:not(:last-child) {
-   margin-right: 50px;
- }
+.navigation__list:not(:last-child) {
+  margin-right: 50px;
+}
 
 .navigation__list {
   position: relative;
@@ -63,7 +83,7 @@
 
   color: var(--primary-title-color);
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
 
@@ -80,20 +100,38 @@
 }
 
 .contacts {
-  display: flex;
-  margin: 0 0 0 auto;
-  padding: 0;
-  list-style: none;
-  gap: 50px;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin: 21px 0 0 auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: 30px;
+    margin: 0 0 0 auto;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .contacts__list {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .contacts__link {
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
   font-weight: 500;
-  line-height: 1.1;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   text-decoration: none;
@@ -104,6 +142,13 @@
   &:hover,
   &:focus {
     color: var(--accent-text-color);
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 

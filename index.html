@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web-Studio</title>
 
     <link
@@ -14,7 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-      <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
@@ -35,6 +35,12 @@
             </li>
           </ul>
         </nav>
+
+        <button type="button" class="menu-button js-open-menu">
+          <svg width="40" height="40">
+            <use class="icons-menu" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
 
         <ul class="contacts">
           <li class="contacts__list">
@@ -66,7 +72,7 @@
         </div>
       </section>
 
-      <!--particularities section-->
+      <!-- particularities section -->
       <section class="section benefits">
         <div class="container">
           <h2 class="visually-hidden">Особливості та переваги</h2>
@@ -160,7 +166,7 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img src="./images/photo1.jpg" alt="фото чоловіка" width="270" height="260" />
+              <img src="./images/photo1.jpg" alt="фото чоловіка" />
               <div class="card">
                 <h3 class="card__title">Ігор Дем'яненко</h3>
                 <p class="card__text" lang="en">Product Designer</p>
@@ -202,7 +208,7 @@
             </li>
 
             <li class="team__item">
-              <img src="./images/photo2.jpg" alt="фото жінки" width="270" height="260" />
+              <img src="./images/photo2.jpg" alt="фото жінки" />
               <div class="card">
                 <h3 class="card__title">Ольга Рєпіна</h3>
                 <p class="card__text" lang="en">Frontend Developer</p>
@@ -241,7 +247,7 @@
             </li>
 
             <li class="team__item">
-              <img src="./images/photo3.jpg" alt="фото чоловіка" width="270" height="260" />
+              <img src="./images/photo3.jpg" alt="фото чоловіка" />
               <div class="card">
                 <h3 class="card__title">Микола Тарасов</h3>
                 <p class="card__text" lang="en">Marketing</p>
@@ -280,7 +286,7 @@
             </li>
 
             <li class="team__item">
-              <img src="./images/photo4.jpg" alt="фото чоловіка" width="270" height="260" />
+              <img src="./images/photo4.jpg" alt="фото чоловіка" />
               <div class="card">
                 <h3 class="card__title">Михайло Єрмаков</h3>
                 <p class="card__text" lang="en">UI Designer</p>
@@ -325,7 +331,7 @@
         <div class="container">
           <h2 class="clients__title">Постійні клієнти</h2>
           <ul class="clients__list">
-            <li class="clients__logo">
+            <li class="clients__item">
               <a href="" class="clients__link">
                 <svg class="clients__icons" width="106" height="60">
                   <use href="./images/icons.svg#icon-Logo"></use>
@@ -333,7 +339,7 @@
               </a>
             </li>
 
-            <li class="clients__logo">
+            <li class="clients__item">
               <a href="" class="clients__link">
                 <svg class="clients__icons" width="106" height="60">
                   <use href="./images/icons.svg#icon-Logo-2"></use>
@@ -341,7 +347,7 @@
               </a>
             </li>
 
-            <li class="clients__logo">
+            <li class="clients__item">
               <a href="" class="clients__link">
                 <svg class="clients__icons" width="106" height="60">
                   <use href="./images/icons.svg#icon-Logo-3"></use>
@@ -349,21 +355,21 @@
               </a>
             </li>
 
-            <li class="clients__logo">
+            <li class="clients__item">
               <a href="" class="clients__link">
                 <svg class="clients__icons" width="106" height="60">
                   <use href="./images/icons.svg#icon-Logo-4"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients__logo">
+            <li class="clients__item">
               <a href="" class="clients__link">
                 <svg class="clients__icons" width="106" height="60">
                   <use href="./images/icons.svg#icon-Logo-5"></use>
                 </svg>
               </a>
             </li>
-            <li class="clients__logo">
+            <li class="clients__item">
               <a href="" class="clients__link">
                 <svg class="clients__icons" width="106" height="60">
                   <use href="./images/icons.svg#icon-Logo-6"></use>
@@ -373,6 +379,56 @@
           </ul>
         </div>
       </section>
+
+      <div class="menu-container js-menu-container">
+        <button type="button" class="menu-button js-close-menu">
+          <svg width="40" height="40">
+            <use class="icons-menu" href="./images/icons.svg#icon-menu_close"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-menu">
+          <li class="mobile-menu__list">
+            <a href="./index.html" class="mobile-menu__link current">Студія</a>
+          </li>
+          <li class="mobile-menu__list">
+            <a href="./portfolio.html" class="mobile-menu__link">Портфоліо</a>
+          </li>
+          <li class="mobile-menu__list">
+            <a href="./index.html" class="mobile-menu__link">Контакти</a>
+          </li>
+        </ul>
+
+        <ul class="mobile-contacts">
+          <li class="mobile-contacts__list">
+            <a href="tel:+380961111111" class="mobile-contacts__link tel"> +38 096 111 11 11</a>
+          </li>
+
+          <li class="mobile-contacts__list">
+            <a href="mailto:info@devstudio.com" class="mobile-contacts__link">
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mobile-social">
+          <li class="mobile-social__list">
+            <a href="https://www.instagram.com" class="mobile-social__link">Instagram</a>
+          </li>
+
+          <li class="mobile-social__list">
+            <a href="https://twitter.com" class="mobile-social__link">Twitter</a>
+          </li>
+
+          <li class="mobile-social__list">
+            <a href="https://www.facebook.com" class="mobile-social__link">Facebook</a>
+          </li>
+
+          <li class="mobile-social__list">
+            <a href="https://www.linkedin.com" class="mobile-social__link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
 
       <div class="backdrup is-hidden" data-modal>
         <div class="modal">
@@ -500,7 +556,7 @@
         <form class="footer-form">
           <p class="footer-form__text">Підпишіться на розсилку</p>
           <div class="subscribe">
-            <label>
+            <label class="subscribe__label">
               <input type="email" name="email" placeholder="E-mail" />
             </label>
             <button type="submit" class="footer-button">
@@ -514,5 +570,13 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
