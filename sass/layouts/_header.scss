@@ -46,7 +46,7 @@
   display: flex;
   list-style: none;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 
@@ -100,7 +100,7 @@
 }
 
 .contacts {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 
